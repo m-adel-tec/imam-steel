@@ -1214,10 +1214,26 @@
     
     console.log('✅ حماية الموقع مفعلة');
 })();
+
+
+
+
+document.addEventListener('keydown', function(e) {
+    // Check if Ctrl key is pressed (e.ctrlKey) and the 'U' key (keyCode 85)
+    // Note: 'U' key code is 85. 'u' is 117.
+    if (e.ctrlKey && (e.keyCode === 85 || e.keyCode === 117)) {
+        e.preventDefault(); // Prevent the default action (opening source)
+        alert('Viewing source is disabled on this page.'); // Optional alert
+        return false;
+    }
+});
+
+  
 // ================= END PROTECTION =================
 </script>
 </body>
 </html>
+
 
 
 
